@@ -3,6 +3,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 //enviroment variable defined in .env as 3000
 const PORT = process.env.PORT || 3000;
@@ -28,16 +30,15 @@ app.get('/TEST', (request, response) => {
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 
-
 app.get('/location', (request, response) => {
   let jsonInfo = require('./data/geo.json');
   let someLocation = new GeoObject(jsonInfo.results[0].address_components[0].long_name, jsonInfo.results[0].formatted_address, jsonInfo.results[0].geometry.location.lat, jsonInfo.results[0].geometry.location.lng);
   response.send(someLocation);
 });
 
-function GeoObject(query, address, lat, lng){
-  this.query = query;
+function GeoObject(query, address, latitude, longitude){
+  this.formatted_query = query;
   this.formatted_address = address;
-  this.lat = lat;
-  this.lng = lng;
+  this.latitude = latitude;
+  this.longitude = longitude;
 }
