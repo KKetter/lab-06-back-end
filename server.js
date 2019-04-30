@@ -27,3 +27,17 @@ app.get('/TEST', (request, response) => {
 });
 
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
+
+
+app.get('/location', (request, response) => {
+  let jsonInfo = require('./data/geo.json');
+  let someLocation = new GeoObject(jsonInfo.results[0].address_components[0].long_name, jsonInfo[0].formatted_address, jsonInfo[0].geometry.location.lat, jsonInfo[0].geometry.location.lng);
+  response.send(someLocation);
+});
+
+function GeoObject(query, address, lat, lng){
+  this.query = query;
+  this.formatted_address = address;
+  this.location.lat = lat;
+  this.location.lng = lng;
+}
