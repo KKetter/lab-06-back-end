@@ -42,3 +42,14 @@ function GeoObject(query, address, latitude, longitude){
   this.latitude = latitude;
   this.longitude = longitude;
 }
+
+app.get('/weather', (request, response) => {
+  let jsonInfo = require('./data/darksky.json');
+  let someLocation = new WeatherObject(jsonInfo.hourly.summary, jsonInfo.currently.time);
+  response.send(someLocation);
+});
+
+function WeatherObject(forecast, time){
+  this.summary = forecast;
+  this.day = time;
+}
