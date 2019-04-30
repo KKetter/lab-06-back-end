@@ -1,0 +1,23 @@
+{
+  "name": "lab-06-back-end",
+  "version": "1.0.0",
+  "description": "Pair:Kent Ketter, Kush Shrestha",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KKetter/lab-06-back-end.git"
+  },
+  "author": "Kent, Kush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KKetter/lab-06-back-end/issues"
+  },
+  "homepage": "https://github.com/KKetter/lab-06-back-end#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4"
+  }
+}
