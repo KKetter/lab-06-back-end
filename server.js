@@ -20,7 +20,7 @@ app.get('/isitworking', (request, response) => {
 
 app.get('/TEST', (request, response) => {
   try {
-    let testData = require('./data/geo.json');
+    let testData = require('./data/geo.JSON');
     response.send(testData);
   } catch (error) {
     console.log('there was en error');
@@ -31,7 +31,7 @@ app.get('/TEST', (request, response) => {
 app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
 
 app.get('/location', (request, response) => {
-  let jsonInfo = require('./data/geo.json');
+  let jsonInfo = require('./data/geo.JSON');
   let someLocation = new GeoObject(jsonInfo.results[0].address_components[0].long_name, jsonInfo.results[0].formatted_address, jsonInfo.results[0].geometry.location.lat, jsonInfo.results[0].geometry.location.lng);
   response.send(someLocation);
 });
