@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 3000;
 
 console.log(process.env.TEST);
 
-app.use(express.static('./public'));
+//if front end is in same directory, front end is in public file and following line is needed
+//app.use(express.static('./public'));
 
 app.get('/isitworking', (request, response) => {
   response.send('yes');
