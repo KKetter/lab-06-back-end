@@ -20,7 +20,7 @@ app.get('/isitworking', (request, response) => {
 
 app.get('/TEST', (request, response) => {
   try {
-    let testData = require('./data/darksky.JSON');
+    let testData = require('./data/geo.json');
     response.send(testData);
   } catch (error) {
     console.log('there was en error');
