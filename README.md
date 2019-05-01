@@ -1,33 +1,65 @@
-### City Explorer
+## City Explorer
+***
+**Authors**: Kent Ketter, Kush Shrestha
 
-Pair:Kent Ketter, Kush Shrestha
+**Version**: 1.0
+***
+### User Acceptance Tests
+Number and name of feature: Map Render
 
-Number and name of feature: ________________________________
+Estimate of time needed to complete: 1 hour
 
-Estimate of time needed to complete: _____
+Start time: 0930
+Finish time: 1300
 
-Start time: _____
+Actual time needed to complete: 3.5 hours
+***
+Number and name of feature: Weather Info
 
-Finish time: _____
+Estimate of time needed to complete: 2 hours
 
-Actual time needed to complete: _____
+Start time: 1315
 
-Number and name of feature: ________________________________
+Finish time: 1740
 
-Estimate of time needed to complete: _____
+Actual time needed to complete: 1h 25 min
+***
+Number and name of feature: Error Handling
 
-Start time: _____
+Estimate of time needed to complete: 15min
 
-Finish time: _____
+Start time: 1740
 
-Actual time needed to complete: _____
+Finish time: 1800
 
-Number and name of feature: ________________________________
+Actual time needed to complete: 20min
+***
 
-Estimate of time needed to complete: _____
+### Overview
+<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
 
-Start time: _____
+### Getting Started
+<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+git clone back end
+git clone front end
+Install packages 
 
-Finish time: _____
+### Architecture
+<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
 
-Actual time needed to complete: _____
+npm dotenv
+
+npm express
+
+npm cors
+
+### Change Log
+04-30-19 0900 - Scaffold complete with .env
+
+04-30-19 1300 - Map image working
+
+04-30-19 1730 - Weather displaying
+
+04-30-19 1800 - Error handling implemented
+
+
